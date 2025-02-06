@@ -9,12 +9,12 @@ const outcomes = {
     RR: "DRAW",
     RP: "BOT",
     RS: "YOU",
-    PP: "DRAW",
+    PP: "Draw",
     PR: "YOU",
     PS: "BOT",
-    SS: "DRAW",
+    SS: "Draw",
     SR: "BOT",
-    SP: "YOU",
+    SP: "YOU"
 };
 
 function handleOptionClick(event){
@@ -42,7 +42,7 @@ function handleOptionClick(event){
         const botValue = ["R","P","S"][randomNumber];
         const outcomeKey = userValue + botValue;
         const outcome = outcomes[outcomeKey] || "Unknown";
-        result.textContent = userValue === botValue ? "Match Draw":`${outcome} WON!`
+        result.textContent = userValue === botValue ? "Match Draw":`${outcome} WON!`;
 
     },2500);
 }
